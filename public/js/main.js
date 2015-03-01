@@ -17,6 +17,16 @@ myApp.controller('HeadingController', ['$scope', function($scope) {
   $scope.testclick = function(){
   	console.log('clicked!');
   }
-  
+
   console.log($scope.menus);
 }]);
+
+
+myApp.controller('Ctrl', ['$scope', function($scope) { 
+{
+	console.log('Controller Loaded');
+    $scope.date = new Date();
+	$scope.testclick = function(){
+		console.log('clicked!');
+	};
+});
