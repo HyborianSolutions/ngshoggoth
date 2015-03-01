@@ -10,8 +10,18 @@ body {
 	font-size: 1.25em; 
 }
 
+.navbar {
+	margin-bottom: 0;
+}
+
 li.mainnav {
+	display: inline-block;
 	list-style-type: none;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+li.mainnav:last-child { 
 }
 
 .mainlogo {
@@ -19,12 +29,17 @@ li.mainnav {
 	text-align: center;
 	font-family: 'Fjalla One', sans-serif;
 	font-size: 1.25em; 
-}
+} 
 
 .sidenav { 
+	float: right;
+	position: absolute;
+	top: 132px;	
+	right: 0px;
 	background-color: #cecece;
 	min-height: 100%;
 	padding: 48px 0;
+	width: 200px;
 }
 
 .preview_section {
@@ -48,8 +63,255 @@ li.mainnav {
 	min-height:150px; 
 }
 
+li.mainnav a {
+	color: #ffffff; 
+}
+	
+a.threeBar {
+	display: none;
+	background-image: url("/img/3bar.jpg"); 
+	width: 25px;
+	height: 25px;
+	float: left;
+}
+
+li.mainnav ul { 
+	display: none;
+	float: left; 
+	top: 32px;	 
+	background-color: #cecece;
+	min-height: 100%;
+	padding: 48px 0;
+	width: 200px;
+}
+
+li.mainnav ul li {  
+	background-color: #cecece;
+	min-height: 100%;
+	padding: 0;
+	margin: 0;
+	width: 200px;
+	font-size: 1em
+}
+
+li.mainnav ul li a {
+	color: #ffffff;
+	text-align: center;
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 0.75em;
+}
+
+.maincontainer {
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	/* Styles */
+	img.mainlogo {
+		height: 50px;
+		width: 89px;
+	}
+	
+	a.threeBar {display: inline-block; margin-left: 10px; margin-top: 15px;}
+
+	ul.mainnav {
+		display: none;
+	}
+
+	li.mainnav {
+		display: block;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		text-align: left;
+	}
+
+	ul.mainnav {
+		padding: 0;
+		margin: 0;
+	}
+
+	li.mainnav:last-child {  
+		height: auto; 
+	}
+
+	.navbar-header {
+		padding: 0;
+		margin: 0;
+	}
+
+	.sidenav {  
+		top: 0px;
+		position: relative;
+		display: block;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		text-align: left;
+		background-color: #cecece;
+		min-height: 100%;
+		height: 100%;
+		padding: 0; 
+		float: none;
+	}
 
 
+} 
 
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */ 
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+	/* Styles */
+	img.mainlogo {
+		height: 50px;
+		width: 89px;
+	} 
+	
+	a.threeBar {display: inline-block; margin-left: 10px; margin-top: 15px;}
+
+	ul.mainnav {
+		display: none;
+	}
+
+	li.mainnav {
+		display: block;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		text-align: left;
+	}
+
+	ul.mainnav {
+		padding: 0;
+		margin: 0;
+	}
+
+	li.mainnav:last-child {  
+		height: auto; 
+	}
+
+	.navbar-header {
+		padding: 0;
+		margin: 0;
+	}
+
+	.sidenav {  
+		top: 0px;
+		position: relative;
+		display: block;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		text-align: left;
+		background-color: #cecece;
+		min-height: 100%;
+		height: 100%;
+		padding: 0; 
+		float: none;
+	}
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+	/* Styles */
+	img.mainlogo {
+		height: 50px;
+		width: 89px;
+	} 
+	
+	a.threeBar {display: inline-block; margin-left: 10px; margin-top: 15px;}
+	
+	ul.mainnav {
+		display: none;
+	}
+
+	li.mainnav {
+		display: block;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		text-align: left;
+	}
+
+	ul.mainnav {
+		padding: 0;
+		margin: 0;
+	}
+
+	li.mainnav:last-child {  
+		height: auto; 
+	}
+
+	.navbar-header {
+		padding: 0;
+		margin: 0;
+	}
+
+	.sidenav {  
+		top: 0px;
+		position: relative;
+		display: block;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		text-align: left;
+		background-color: #cecece;
+		min-height: 100%;
+		height: 100%;
+		padding: 0; 
+		float: none;
+	}
+
+}
 
 

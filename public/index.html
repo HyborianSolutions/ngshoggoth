@@ -15,7 +15,7 @@
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="/css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <script src="lib/angular/angular.js"></script>
@@ -24,33 +24,88 @@
         <script src="lib/angular-strap/dist/angular-strap.tpl.min.js"></script>
 
     </head>
-    <body>
+    <body ng-app="peanut">
         <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-controller="HeadingController">
+        <button ng-click="console.log('clicked');">test</button>
             <div class="container">
                 <div class="col-lg-12 navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span> 
-                    </button> 
+                    <a class="threeBar" href="#"> </a>
                     <div class="col-lg-12"> 
                         <div class="col-lg-4 mainnav"></div>
-                        <div class="col-lg-4 mainlogo"><img src="/img/logo.png"></div>
+                        <div class="col-lg-4 mainlogo"><img class="mainlogo" src="/img/logo.png"></div>
                         <div class="col-lg-4 mainnav"></div> 
                     </div>
-                    <ol class="col-lg-12">
-                        <li class="col-lg-1 mainnav"> </li>
-                        <li class="col-lg-1 mainnav">Home</li>
-                        <li class="col-lg-1 mainnav">Account</li>
-                        <li class="col-lg-1 mainnav">Gaming</li>
-                        <li class="col-lg-2 mainnav">Literature</li> 
-                        <li class="col-lg-2 mainnav">Conventions</li>
-                        <li class="col-lg-1 mainnav">Editorials</li>
-                        <li class="col-lg-1 mainnav">Comedy</li>
-                        <li class="col-lg-1 mainnav">News</li>
-                        <li class="col-lg-1 mainnav"> </li>
-                    </ol>
+                    <ul class="egmenu navbar mainnav">
+                      <li class=" mainnav"><a href="#">Home</a></li>
+                      <li class="mainnav"><a href="#" class="has-sub" ng-mouseover="console.log(menus);  menus.accounts = !menus.accounts" ng-mouseleave="console.log(menus);  menus.accounts = !menus.accounts">Account</a>
+                        <ul class="col-lg-1 mainnav" ng-if="menus.accounts">
+                          <li class="mainnav"><a href="#">Scenerios</a></li>
+                          <li class="mainnav"><a href="#">News</a></li>
+                          <li class="mainnav"><a href="#">Char Sheets</a></li>
+                          <li class="mainnav"><a href="#">Directory</a></li> 
+                        </ul>  
+                      </li>
+                      <li class="mainnav"><a href="#" class="has-sub" ng-mouseover="console.log(menus);  menus.gaming = !menus.gaming" ng-mouseleave="console.log(menus);  menus.gaming = !menus.gaming">Gaming</a> 
+                        <ul class="col-lg-1 mainnav" ng-if="menus.gaming">
+                          <li class="mainnav"><a href="#">Scenerios</a></li>
+                          <li class="mainnav"><a href="#">News</a></li>
+                          <li class="mainnav"><a href="#">Char Sheets</a></li>
+                          <li class="mainnav"><a href="#">Directory</a></li> 
+                        </ul>  
+                      </li>
+                      <li class="mainnav"><a href="#" class="has-sub" ng-mouseover="console.log(menus);  menus.literature = !menus.literature" ng-mouseleave="console.log(menus);  menus.literature = !menus.literature">Literature</a>
+                        <ul class="col-lg-1 mainnav" ng-if="menus.literature">
+                          <li class="mainnav"><a href="#">Scenerios</a></li>
+                          <li class="mainnav"><a href="#">News</a></li>
+                          <li class="mainnav"><a href="#">Char Sheets</a></li>
+                          <li class="mainnav"><a href="#">Directory</a></li> 
+                        </ul>  
+                      </li>
+                      <li class="mainnav"><a href="#" class="has-sub" ng-mouseover="console.log(menus);  menus.conventions = !menus.conventions" ng-mouseleave="console.log(menus);  menus.conventions = !menus.conventions">Conventions</a>
+                        <ul class="col-lg-1 mainnav" ng-if="menus.conventions">
+                          <li class="mainnav"><a href="#">Scenerios</a></li>
+                          <li class="mainnav"><a href="#">News</a></li>
+                          <li class="mainnav"><a href="#">Char Sheets</a></li>
+                          <li class="mainnav"><a href="#">Directory</a></li> 
+                        </ul>  
+                      </li>
+                      <li class="mainnav"><a href="#" class="has-sub" ng-mouseover="console.log(menus);  menus.editorials = !menus.editorials" ng-mouseleave="console.log(menus);  menus.editorials = !menus.editorials">Editorials</a>
+                        <ul class="col-lg-1 mainnav" ng-if="menus.editorials">
+                          <li class="mainnav"><a href="#">Scenerios</a></li>
+                          <li class="mainnav"><a href="#">News</a></li>
+                          <li class="mainnav"><a href="#">Char Sheets</a></li>
+                          <li class="mainnav"><a href="#">Directory</a></li> 
+                        </ul>  
+                      </li>
+                      <li class="mainnav"><a href="#" class="has-sub" ng-click="console.log(menus);  menus.comedy = !menus.comedy" ng-mouseover="console.log(menus);  menus.comedy = !menus.comedy" ng-mouseleave="console.log(menus);  menus.comedy = !menus.comedy">Comedy</a>
+                        <ul class="col-lg-1 mainnav" ng-if="menus.comedy">
+                          <li class="mainnav"><a href="#">Scenerios</a></li>
+                          <li class="mainnav"><a href="#">News</a></li>
+                          <li class="mainnav"><a href="#">Char Sheets</a></li>
+                          <li class="mainnav"><a href="#">Directory</a></li> 
+                        </ul>  
+                      </li>
+                      <li class="mainnav"><a href="#" class="has-sub" ng-mouseover="console.log(menus);  menus.news = !menus.news" ng-mouseleave="console.log(menus);  menus.news = !menus.news">News</a>
+                        <ul class="col-lg-1 mainnav" ng-if="menus.news">
+                          <li class="mainnav"><a href="#">Scenerios</a></li>
+                          <li class="mainnav"><a href="#">News</a></li>
+                          <li class="mainnav"><a href="#">Char Sheets</a></li>
+                          <li class="mainnav"><a href="#">Directory</a></li> 
+                        </ul>  
+                      </li>
+                      
+                        <div class="sidenav">
+                            Side Nav<br>
+                            Side Nav<br>
+                            Side Nav<br>
+                            Side Nav<br>
+                            Side Nav<br>
+                            Side Nav<br>
+                        </div> 
+                    </ul> 
                 </div>
                 <!--/.navbar-collapse -->
             </div>
@@ -58,7 +113,7 @@
 
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="container">
-            <div class="col-lg-12">
+            <div class="col-lg-12 maincontainer">
                 <div class="col-lg-10">    
                     <div class="jumbotron">
                         <h1>Hello, world!</h1>
@@ -110,14 +165,6 @@
                         </div>
                     </div> 
                 </div>
-                <div class="col-lg-2 sidenav">
-                    Side Nav<br>
-                    Side Nav<br>
-                    Side Nav<br>
-                    Side Nav<br>
-                    Side Nav<br>
-                    Side Nav<br>
-                </div> 
             </div>
         </div>
         <hr>
