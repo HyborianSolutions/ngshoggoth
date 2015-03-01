@@ -24,8 +24,7 @@
         <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-controller="HeadingController">
-        <button ng-click="testclick">test</button>{{greeting}}
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-controller="HeadingController"> 
             <div class="container">
                 <div class="col-lg-12 navbar-header">
                     <a class="threeBar" href="#"> </a>
@@ -36,7 +35,7 @@
                     </div>
                     <ul class="egmenu navbar mainnav">
                       <li class=" mainnav"><a href="#">Home</a></li>
-                      <li class="mainnav"><a href="#" class="has-sub" ng-mouseover="console.log(menus);  menus.accounts = !menus.accounts" ng-mouseleave="console.log(menus);  menus.accounts = !menus.accounts">Account</a>
+                      <li class="mainnav"><a href="#" class="has-sub" ng-mouseover="menus.accounts = !menus.accounts" ng-mouseleave="menus.accounts = !menus.accounts">Account</a>
                         <ul class="col-lg-1 mainnav" ng-if="menus.accounts">
                           <li class="mainnav"><a href="#">Scenerios</a></li>
                           <li class="mainnav"><a href="#">News</a></li>
@@ -76,7 +75,7 @@
                           <li class="mainnav"><a href="#">Directory</a></li> 
                         </ul>  
                       </li>
-                      <li class="mainnav"><a href="#" class="has-sub" ng-click="console.log(menus);  menus.comedy = !menus.comedy" ng-mouseover="console.log(menus);  menus.comedy = !menus.comedy" ng-mouseleave="console.log(menus);  menus.comedy = !menus.comedy">Comedy</a>
+                      <li class="mainnav"><a href="#" class="has-sub" ng-click="menus.comedy = !menus.comedy" ng-mouseover="menus.comedy = !menus.comedy" ng-mouseleave="menus.comedy = !menus.comedy">Comedy</a>
                         <ul class="col-lg-1 mainnav" ng-if="menus.comedy">
                           <li class="mainnav"><a href="#">Scenerios</a></li>
                           <li class="mainnav"><a href="#">News</a></li>
@@ -166,8 +165,7 @@
         <hr>
         <div class="col-lg-12">
             <footer>
-                <p>&copy; Company <span ng-app ng-controller="Ctrl">{{date | date:'yyyy-MM-dd'}}</span></p>
-                <button ng-click="testclick">test</button>
+                <p>&copy; Shoggoth.net & it's respected contributers. <span ng-app ng-controller="Ctrl">1998 - {{date | date:'yyyy'}}</span></p> 
             </footer>
         </div> <!-- /container -->        
     </body>
