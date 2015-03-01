@@ -23,10 +23,9 @@ myApp.controller('HeadingController', ['$scope', function($scope) {
 
 
 myApp.controller('Ctrl', ['$scope', function($scope) { 
-{
 	console.log('Controller Loaded');
     $scope.date = new Date();
 	$scope.testclick = function(){
 		console.log('clicked!');
 	};
-});
+}]);
