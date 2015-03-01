@@ -13,5 +13,9 @@ myApp.controller('HeadingController', ['$scope', function($scope) {
   	'comedy':false,
   	'news':false 
   };
+
+  $scope.testclick = function(){
+  	console.log('clicked!');
+  }
   console.log($scope.menus);
 }]);
