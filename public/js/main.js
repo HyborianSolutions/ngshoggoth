@@ -17,5 +17,6 @@ myApp.controller('HeadingController', ['$scope', function($scope) {
   $scope.testclick = function(){
   	console.log('clicked!');
   }
+  
   console.log($scope.menus);
 }]);

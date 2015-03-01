@@ -22,6 +22,7 @@
         <script src="lib/angular-animate/angular-animate.js"></script>
         <script src="lib/angular-strap/dist/angular-strap.min.js"></script>
         <script src="lib/angular-strap/dist/angular-strap.tpl.min.js"></script>
+        <script src="js/main.js"></script>
 
     </head>
     <body ng-app="peanut">
@@ -29,7 +30,7 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-controller="HeadingController">
-        <button ng-click="testclick">test</button>
+        <button ng-click="testclick">test</button>{{greeting}}
             <div class="container">
                 <div class="col-lg-12 navbar-header">
                     <a class="threeBar" href="#"> </a>
@@ -176,7 +177,6 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
