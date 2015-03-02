@@ -19,6 +19,7 @@ li.mainnav {
 	list-style-type: none;
 	padding-right: 15px;
 	padding-left: 15px;
+	height: 31px;
 }
 
 li.mainnav:last-child { 
@@ -75,9 +76,9 @@ a.threeBar {
 	float: left;
 }
 
-li.mainnav ul {  
-	float: left; 
-	top: 32px;	 
+li.mainnav ul {    
+	float: left;
+	display: block;
 	background-color: #cecece;
 	min-height: 100%;
 	padding: 48px 0;
@@ -104,6 +105,15 @@ li.mainnav ul li a {
 	border-left: 1px solid #000000;
 	border-right: 1px solid #000000;
 	border-bottom: 1px solid #000000;
+}
+
+a.has-sub {
+	display: block;
+}
+
+ul.egmenu {
+    display: table;
+    table-layout: fixed;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
