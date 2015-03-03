@@ -1,172 +1,87 @@
 <!DOCTYPE html>
-    <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-    <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-    <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-    <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Shoggoth.net</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html ng-app="plunker">
 
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> 
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="/css/main.css">
+  <head>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AngularJS Plunker</title>
 
+    <link data-require="bootstrap-css@*" data-semver="3.0.0" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
 
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
-        <script src="js/main.js"></script>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <script data-require="angular.js@1.1.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js" data-semver="1.1.5"></script>
+    <script data-require="ui-bootstrap@0.5.0" data-semver="0.5.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
+    <script src="app.js"></script>
+    <style>
+    div.navbar-collapse.collapse {
+        display: block;
+        overflow: hidden;
+        max-height: 0px;
+        -webkit-transition: max-height .3s ease;
+        -moz-transition: max-height .3s ease;
+        -o-transition: max-height .3s ease;
+        transition: max-height .3s ease;
+    }
+    div.navbar-collapse.collapse.in {
+        max-height: 2000px;
+    }
+    </style>
+  </head>
 
-    </head>
-    <body ng-app="peanut">
-        <!--[if lt IE 7]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-controller="HeadingController"> 
-            <div class="container">
-                <div class="col-lg-12 navbar-header">
-                    <a class="threeBar" href="#"> </a>
-                    <div class="col-lg-12"> 
-                        <div class="col-lg-4 mainnav"></div>
-                        <div class="col-lg-4 mainlogo"><img class="mainlogo" src="/img/logo.png"></div>
-                        <div class="col-lg-4 mainnav"></div> 
-                    </div>
-                    <ul class="egmenu navbar mainnav">
-                      <li class=" mainnav"><a href="#">Home</a></li>
-                      <li class="mainnav" ng-mouseover="menus.accounts = !menus.accounts" ng-mouseleave="menus.accounts = !menus.accounts"><a href="#" class="has-sub">Account</a>
-                        <ul class="col-lg-1 mainnav" ng-if="menus.accounts">
-                          <li class="mainnav"><a href="#">Scenerios</a></li>
-                          <li class="mainnav"><a href="#">News</a></li>
-                          <li class="mainnav"><a href="#">Char Sheets</a></li>
-                          <li class="mainnav"><a href="#">Directory</a></li> 
-                        </ul>  
-                      </li>
-                      <li class="mainnav" ng-mouseover=" menus.gaming = !menus.gaming" ng-mouseleave=" menus.gaming = !menus.gaming"><a href="#" class="has-sub">Gaming</a> 
-                        <ul class="col-lg-1 mainnav" ng-if="menus.gaming">
-                          <li class="mainnav"><a href="#">Scenerios</a></li>
-                          <li class="mainnav"><a href="#">News</a></li>
-                          <li class="mainnav"><a href="#">Char Sheets</a></li>
-                          <li class="mainnav"><a href="#">Directory</a></li> 
-                        </ul>  
-                      </li>
-                      <li class="mainnav" ng-mouseover=" menus.literature = !menus.literature" ng-mouseleave=" menus.literature = !menus.literature"><a href="#" class="has-sub">Literature</a>
-                        <ul class="col-lg-1 mainnav" ng-if="menus.literature">
-                          <li class="mainnav"><a href="#">Scenerios</a></li>
-                          <li class="mainnav"><a href="#">News</a></li>
-                          <li class="mainnav"><a href="#">Char Sheets</a></li>
-                          <li class="mainnav"><a href="#">Directory</a></li> 
-                        </ul>  
-                      </li>
-                      <li class="mainnav" ng-mouseover=" menus.conventions = !menus.conventions" ng-mouseleave=" menus.conventions = !menus.conventions"><a href="#" class="has-sub">Conventions</a>
-                        <ul class="col-lg-1 mainnav" ng-if="menus.conventions">
-                          <li class="mainnav"><a href="#">Scenerios</a></li>
-                          <li class="mainnav"><a href="#">News</a></li>
-                          <li class="mainnav"><a href="#">Char Sheets</a></li>
-                          <li class="mainnav"><a href="#">Directory</a></li> 
-                        </ul>  
-                      </li>
-                      <li class="mainnav" ng-mouseover=" menus.editorials = !menus.editorials" ng-mouseleave=" menus.editorials = !menus.editorials"><a href="#" class="has-sub">Editorials</a>
-                        <ul class="col-lg-1 mainnav" ng-if="menus.editorials">
-                          <li class="mainnav"><a href="#">Scenerios</a></li>
-                          <li class="mainnav"><a href="#">News</a></li>
-                          <li class="mainnav"><a href="#">Char Sheets</a></li>
-                          <li class="mainnav"><a href="#">Directory</a></li> 
-                        </ul>  
-                      </li>
-                      <li class="mainnav" ng-click="menus.comedy = !menus.comedy" ng-mouseover="menus.comedy = !menus.comedy" ng-mouseleave="menus.comedy = !menus.comedy"><a href="#" class="has-sub">Comedy</a>
-                        <ul class="col-lg-1 mainnav" ng-if="menus.comedy">
-                          <li class="mainnav"><a href="#">Scenerios</a></li>
-                          <li class="mainnav"><a href="#">News</a></li>
-                          <li class="mainnav"><a href="#">Char Sheets</a></li>
-                          <li class="mainnav"><a href="#">Directory</a></li> 
-                        </ul>  
-                      </li>
-                      <li class="mainnav" ng-mouseover=" menus.news = !menus.news" ng-mouseleave=" menus.news = !menus.news"><a href="#" class="has-sub">News</a>
-                        <ul class="col-lg-1 mainnav" ng-if="menus.news">
-                          <li class="mainnav"><a href="#">Scenerios</a></li>
-                          <li class="mainnav"><a href="#">News</a></li>
-                          <li class="mainnav"><a href="#">Char Sheets</a></li>
-                          <li class="mainnav"><a href="#">Directory</a></li> 
-                        </ul>  
-                      </li>
-                      
-                        <div class="sidenav">
-                            Side Nav<br>
-                            Side Nav<br>
-                            Side Nav<br>
-                            Side Nav<br>
-                            Side Nav<br>
-                            Side Nav<br>
-                        </div> 
-                    </ul> 
-                </div>
-                <!--/.navbar-collapse -->
-            </div>
-        </nav>
+  <body ng-controller="MainCtrl">
+  
+    <nav class="navbar navbar-default" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
 
-        <!-- Main jumbotron for a primary marketing message or call to action -->
-        <div class="container">
-            <div class="col-lg-12 maincontainer">
-                <div class="col-lg-10">    
-                    <div class="jumbotron">
-                        <h1>Hello, world!</h1>
-                        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-                    </div>  
-                    <div class="col-lg-12">
-                        <div class="col-md-4">
-                            <h4>Some title goes here</h4>
-                            <small>By Some Author  Jan 1st, 2014</small>
-                            <div class="preview_section_wrapper"><h2 class="preview_section">Scenerio</h2></div>
-                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-                        </div>
-                        <div class="col-md-4">
-                            <h4>Some title goes here</h4>
-                            <small>By Some Author  Jan 1st, 2014</small>
-                            <div class="preview_section_wrapper"><h2 class="preview_section">Fiction</h2></div>
-                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-                        </div>
-                        <div class="col-md-4">
-                            <h4>Some title goes here</h4>
-                            <small>By Some Author  Jan 1st, 2014</small>
-                            <div class="preview_section_wrapper"><h2 class="preview_section">Literature</h2></div>
-                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-                        </div>
-                        <div class="col-md-4">
-                            <h4>Some title goes here</h4>
-                            <small>By Some Author  Jan 1st, 2014</small>
-                            <div class="preview_section_wrapper"><h2 class="preview_section">Filks</h2></div>
-                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-                        </div>
-                        <div class="col-md-4">
-                            <h4>Some title goes here</h4>
-                            <small>By Some Author  Jan 1st, 2014</small>
-                            <div class="preview_section_wrapper"><h2 class="preview_section">Origins</h2></div>
-                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-                        </div>
-                        <div class="col-md-4">
-                            <h4>Some title goes here</h4>
-                            <small>By Some Author  Jan 1st, 2014</small>
-                            <div class="preview_section_wrapper"><h2 class="preview_section">Gaming</h2></div>
-                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="col-lg-12">
-            <footer>
-                <p>&copy; Shoggoth.net & it's respected contributers. <span ng-app ng-controller="Ctrl">1998 - {{date | date:'yyyy'}}</span></p> 
-            </footer>
-        </div> <!-- /container -->        
-    </body>
+        <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Brand</a>
+      </div>
+    
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+      
+        <ul class="nav navbar-nav">
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+          
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" ng-controller="DropdownCtrl">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav>
+    
+    <p>Hello {{name}}!</p>
+    
+  </body>
 </html>

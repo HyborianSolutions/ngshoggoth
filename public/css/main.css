@@ -1,6 +1,10 @@
-body {
-    padding-top: 100px;
+body { 
     padding-bottom: 20px;
+}
+
+nav.navbar  {
+	position: fixed;
+	width: 100%;
 }
 
 .mainnav {
