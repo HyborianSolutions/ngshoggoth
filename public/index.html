@@ -7,6 +7,9 @@
     <title>AngularJS Plunker</title>
 
     <link data-require="bootstrap-css@*" data-semver="3.0.0" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/css/main.css">
 
     <script>document.write('<base href="' + document.location + '" />');</script>
     <script data-require="angular.js@1.1.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js" data-semver="1.1.5"></script>
@@ -80,8 +83,66 @@
         </ul>
       </div><!-- /.navbar-collapse -->
     </nav>
-    
-    <p>Hello {{name}}!</p>
-    
-  </body>
+    <div class="container">
+            <div class="col-lg-12 maincontainer">
+                <div class="col-lg-10">    
+                    <div class="jumbotron">
+                        <h1>Hello, world!</h1>
+                        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+                    </div>  
+                    <div class="col-lg-12">
+                        <div class="col-md-4">
+                            <h4>Some title goes here</h4>
+                            <small>By Some Author  Jan 1st, 2014</small>
+                            <div class="preview_section_wrapper"><h2 class="preview_section">Scenerio</h2></div>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Some title goes here</h4>
+                            <small>By Some Author  Jan 1st, 2014</small>
+                            <div class="preview_section_wrapper"><h2 class="preview_section">Fiction</h2></div>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Some title goes here</h4>
+                            <small>By Some Author  Jan 1st, 2014</small>
+                            <div class="preview_section_wrapper"><h2 class="preview_section">Literature</h2></div>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Some title goes here</h4>
+                            <small>By Some Author  Jan 1st, 2014</small>
+                            <div class="preview_section_wrapper"><h2 class="preview_section">Filks</h2></div>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Some title goes here</h4>
+                            <small>By Some Author  Jan 1st, 2014</small>
+                            <div class="preview_section_wrapper"><h2 class="preview_section">Origins</h2></div>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Some title goes here</h4>
+                            <small>By Some Author  Jan 1st, 2014</small>
+                            <div class="preview_section_wrapper"><h2 class="preview_section">Gaming</h2></div>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="col-lg-12">
+            <footer>
+                <p>&copy; Shoggoth.net & it's respected contributers. <span ng-app ng-controller="Ctrl">1998 - {{date | date:'yyyy'}}</span></p> 
+            </footer>
+        </div> <!-- /container -->        
+    </body>
 </html>
