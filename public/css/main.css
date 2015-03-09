@@ -26,6 +26,12 @@ li.mainnav {
 	height: 31px;
 }
 
+.sidenav_nav {
+	position: absolute;
+	top: 52px;
+	width: 100%;
+}
+
 li.mainnav:last-child { 
 }
 
@@ -46,15 +52,9 @@ li.mainnav:last-child {
 	font-size: 1.25em; 
 } 
 
-.sidenav { 
-	float: right;
-	position: absolute;
-	top: 132px;	
-	right: 0px;
+.sidenav {  
 	background-color: #cecece;
-	min-height: 100%;
-	padding: 48px 0;
-	width: 200px;
+	min-height: 100%;  
 }
 
 .preview_section {
