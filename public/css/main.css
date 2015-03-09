@@ -136,9 +136,27 @@ li.mainnav ul li a {
 }
 
 .maincontainer {
-	border-left: 1px solid #000000;
-	border-right: 1px solid #000000;
-	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000; 
+	border-right: 1px solid #000000; 
+	border-bottom: 1px solid #000000; 
+}
+
+.sidenav_box{
+    background-image: url("/img/sidenav_boxbg.png");
+    background-color: #FFFFFF;
+    margin-bottom: 15px;
+}
+.sidenav_box_container{
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+.article_buttons {
+	width: 100%;
+}
+dl.article_buttons {
+	margin: 0;
 }
 
 a.has-sub {
@@ -270,7 +288,7 @@ and (max-width : 320px) {
 		padding: 0; 
 		float: none;
 	}
-		
+
 	.navbar-default {
 		background-color: #000000;
 		background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
