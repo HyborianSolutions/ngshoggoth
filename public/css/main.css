@@ -35,6 +35,10 @@ li.mainnav {
 }
 .mancontainer {
 	margin-top: 52px;
+} 
+.container .jumbotron {
+  padding-right: 0;
+  padding-left: 0;
 }
 .sidenav_nav {
 	position: absolute;
@@ -120,6 +124,9 @@ li.mainnav ul li {
 	width: 200px;
 	font-size: 1em
 }
+.topspacer {
+	height: 52px;
+}
 
 li.mainnav ul li a {
 	color: #ffffff;
@@ -141,6 +148,11 @@ a.has-sub {
 ul.egmenu {
     display: table;
     table-layout: fixed;
+}
+
+footer {
+	position: fixed;
+	bottom: 0px;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -181,15 +193,12 @@ and (max-device-width : 480px) {
 		margin: 0;
 	}
 
-	.sidenav {  
-		top: 0px;
-		position: relative;
-		display: block;
-		width: 100%;
+	.sidenav {   
 		padding: 0;
 		margin: 0;
 		text-align: left;
 		background-color: #cecece;
+		border-left: 1px solid darkgrey;
 		min-height: 100%;
 		height: 100%;
 		padding: 0; 
