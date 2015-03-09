@@ -151,8 +151,12 @@ ul.egmenu {
 }
 
 footer {
+	color: #FFFFFF;
 	position: fixed;
 	bottom: 0px;
+	background-color: #000000;
+	background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
+	width: 100%;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
