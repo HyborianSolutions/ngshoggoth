@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="plunker">
+<html ng-app="peanut">
 
   <head>
     <meta charset="utf-8" />
@@ -35,6 +35,7 @@
         
   
     <nav class="navbar navbar-default" role="navigation">
+    <div class="container"> 
         <a class="navbar-brand logolink" href="#"><img src="/img/logo-thumb.png" alt="Logo"></a>
       <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header"> 
@@ -48,90 +49,97 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'"> 
             <ul class="nav navbar-nav">
-                <form class="navbar-form navbar-left" role="search">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                  </div>
-                  <button type="submit" class="btn btn-default">Submit</button>
-                </form> 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" ng-controller="DropdownCtrl">Account <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li><a href="#">Separated link</a></li>
-                      <li><a href="#">One more separated link</a></li>
+                      <li><h4>Welcome Guest</h4></li>
+                      <li><form class="navbar-form navbar-left" role="Login">
+                        <input type="text" class="form-control" placeholder="Username/Email">
+                        <input type="password" class="form-control" placeholder="Password">
+                        <button type="submit" class="btn btn-default">Log In</button>
+                      </form></li>
+                      <li><a href="#">Forgot Password</a></li>
+                      <li><a href="#">Register</a></li> 
                     </ul>
                 </li> 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" ng-controller="DropdownCtrl">Gaming <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li><a href="#">Separated link</a></li>
-                      <li><a href="#">One more separated link</a></li>
+                      <li><a href="#">Scenerios</a></li>
+                      <li><a href="#">Characters</a></li>
+                      <li><a href="#">NPC & Creatures</a></li>
+                      <li><a href="#">Spells</a></li> 
                     </ul>
                 </li> 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" ng-controller="DropdownCtrl">Literature <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li><a href="#">Separated link</a></li>
-                      <li><a href="#">One more separated link</a></li>
+                      <li><a href="#">Fiction</a></li>
+                      <li><a href="#">Non Fiction</a></li> 
                     </ul>
                 </li> 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" ng-controller="DropdownCtrl">Conventions <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li><a href="#">Separated link</a></li>
-                      <li><a href="#">One more separated link</a></li>
+                      <li><a href="#">CthulhuCon</a></li>
+                      <li><a href="#">GenCon</a></li>
+                      <li><a href="#">HP Lovecraft Film Fest: Portland</a></li>
+                      <li><a href="#">HP Lovecraft Film Fest: Los Angeles</a></li>
+                      <li><a href="#">KublaCon</a></li>
+                      <li><a href="#">Origins</a></li>
                     </ul>
                 </li> 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" ng-controller="DropdownCtrl">Editorials <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li><a href="#">Separated link</a></li>
-                      <li><a href="#">One more separated link</a></li>
+                      <li><a href="#">Game Mastering</a></li>
+                      <li><a href="#">Scenerio Writing</a></li>
+                      <li><a href="#">Story Writing</a></li>
+                      <li><a href="#">Artistry</a></li>
+                      <li><a href="#">Reviews</a></li>
+                      <li><a href="#">General Musings</a></li>
                     </ul>
                 </li>  
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Comedy <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li><a href="#">Separated link</a></li>
+                      <li><a href="#">Filks</a></li>
+                      <li><a href="#">Stories</a></li> 
                     </ul>
                 </li> 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">News <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li><a href="#">Separated link</a></li>
+                        <li><a href="#">Product Releases</a></li>
+                        <li><a href="#">Strange News</a></li>
                     </ul>
-                </li>
+                </li> 
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Site News</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Statement</a></li> 
+                    </ul> 
+                </li> 
             </ul>
         </div><!-- /.navbar-collapse -->
+        </div>
     </nav>
     <div class="container">
-            <div class="col-lg-12">
+            <div class="col-lg-12 mancontainer">
                 <div class="col-md-10">    
-                    <div class="jumbotron">
-                        <h1>Hello, world!</h1>
-                        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+                    <div class="jumbotron" ng-controller="CarouselDemoCtrl">
+                        <carousel interval="myInterval">
+                          <slide ng-repeat="slide in slides" active="slide.active">
+                            <img ng-src="{{slide.image}}" style="margin:auto;">
+                            <div class="carousel-caption">
+                              <h4>Slide {{$index}}</h4>
+                              <p>{{slide.text}}</p>
+                            </div>
+                          </slide>
+                        </carousel>
                     </div>  
                     <div class="col-lg-12">
                         <div class="col-md-4">
