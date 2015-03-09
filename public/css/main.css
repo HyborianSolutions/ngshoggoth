@@ -270,6 +270,11 @@ and (max-width : 320px) {
 		padding: 0; 
 		float: none;
 	}
+		
+	.navbar-default {
+		background-color: #000000;
+		background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
+	}
 
 }
 
@@ -278,6 +283,12 @@ and (max-width : 320px) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) {
 /* Styles */
+		
+	.navbar-default {
+		background-color: #000000;
+		background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
+	}
+
 }
 
 /* iPads (landscape) ----------- */
@@ -286,6 +297,12 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px) 
 and (orientation : landscape) {
 /* Styles */
+		
+	.navbar-default {
+		background-color: #000000;
+		background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
+	}
+
 }
 
 /* iPads (portrait) ----------- */
@@ -294,18 +311,36 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px) 
 and (orientation : portrait) {
 /* Styles */
+		
+	.navbar-default {
+		background-color: #000000;
+		background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
+	}
+
 }
 
 /* Desktops and laptops ----------- */
 @media only screen 
 and (min-width : 1224px) {
 /* Styles */
+		
+	.navbar-default {
+		background-color: #000000;
+		background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
+	}
+
 }
 
 /* Large screens ----------- */
 @media only screen 
 and (min-width : 1824px) {
 /* Styles */
+		
+	.navbar-default {
+		background-color: #000000;
+		background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
+	}
+
 }
 
 /* iPhone 4 ----------- */
@@ -359,6 +394,12 @@ only screen and (min-device-pixel-ratio : 1.5) {
 		height: 100%;
 		padding: 0; 
 		float: none;
+	}
+
+		
+	.navbar-default {
+		background-color: #000000;
+		background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
 	}
 
 }
