@@ -82,17 +82,21 @@ li.mainnav:last-child {
     -ms-transform-origin:right, top;
     -webkit-transform: rotate(-90deg);
     -webkit-transform-origin:right, top;  
-    margin-top: 75px;
+    margin-top: 150px;
     margin-bottom: 0; 
 	width: 40px;
-	text-align: center;
+	text-align: center; 
 }
 
 .preview_section_wrapper { 
     margin-top: 15px;
 	float: left;
 	width: 40px;
-	min-height:150px; 
+	text-align: right;
+	min-height:100px; 
+	border-right: 1px solid #cecece;
+	margin-right: 3px;
+
 }
 
 li.mainnav a {
@@ -191,6 +195,11 @@ p.articleteaser::first-letter {
     color:#000000; 
     font-weight: bolder;
     text-transform: uppercase;
+}
+h4.articleteaser {
+	border-bottom: 3px dotted #cecece;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
